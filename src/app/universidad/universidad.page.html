@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Universidad</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-label position="stacked">Descubre un pais</ion-label>
+  <ion-input [(ngModel)]="country" placeholder="Ingresa un nombre"></ion-input>
+
+
+<ion-item>
+  <ion-button (click)="Descubrir()" color="tertiary">Mostrar</ion-button>
+</ion-item>
+
+<ion-list lines="full">
+  <ion-item *ngFor = "let university of universidad">
+    <div>
+    <ion-label>{{university.name}}</ion-label>
+    <ion-label>{{university.domains}}</ion-label>
+    <ion-label>{{university.web_pages}}</ion-label>
+    </div>
+  </ion-item>
+</ion-list>
+
+</ion-content>
